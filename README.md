@@ -1,14 +1,17 @@
 # ContextMirror2.0 
 
-ContextMirror2.0 is a tool designed to estimate pairwise coevolution of genes in a given proteome, described in described in https://doi.org/10.1101/2024.12.27.630483. This repository provides everything you need to run the pipeline locally, including configuration options for customizing your analysis.
+ContextMirror2.0 is a tool designed to estimate pairwise coevolution of genes in a given proteome, in described in https://doi.org/10.1101/2024.12.27.630483. This repository provides everything you need to run the pipeline locally, including configuration options for customizing your analysis.
 
 Clone this repository to your local machine:
 
     git clone https://github.com/yourusername/ContextMirror2.0.git
     cd ContextMirror2.0
 
-BLAST: Version 2.13, used to search the NCBI database for potential orthologs. 
-MAFFT: Version 7.471 for multiple sequence alignments (MSAs) with the following settings:
+BLAST: Version 2.13 (https://blast.ncbi.nlm.nih.gov/doc/blast-help/downloadblastdata.html)
+MAFFT: Version 7.471 (https://mafft.cbrc.jp/alignment/software/source.html)
+FastTree: Version 2.1 (https://anaconda.org/bioconda/fasttree)
+csvkit: Version 1.3.0 (https://csvkit.readthedocs.io/en/0.9.1/install.html)
+
 Python: Version 3.6.1 with these dependencies:
     os, sys
     Bio v1.79 (modules: SeqIO, AlignIO, Phylo, ClustalWCommandline, DistanceTreeConstructor)
@@ -18,15 +21,7 @@ Python: Version 3.6.1 with these dependencies:
     pandas v1.4.3
     community v0.16
     scipy v1.8.1
-    
-FastTree: Version 2.1 for phylogenetic tree construction.   
-csvkit: Version 1.3.0 for handling CSV files.
 
-    sudo apt-get blast lo q sea
-    sudo apt-get mafft lo q sea
-    sudo apt-get FAstTreee lo que sea
-    sudo apt-get csvkit lo q sea
-    
 Install the ContextMirror2.0 package:
 
     pip isntall .
@@ -35,7 +30,7 @@ Within the ContextMirror2.0 folder create a new directory to perform your analys
 
 * Config.ini file: Adjust the parameters in the config.ini file to match your dataset and analysis needs. Remember tospecify your input file path.
 
-Open the config.ini file and modify the parameters as needed (e.g., file, tools and database paths, thresholds, ...). This pipeline runs locally, therefore, an appropiate BLAST+ database must be installed and formatted with taxonomic information. Here are some resources on how to build a custom databse with the BLAST+ suite. Consider disk space requirements before installing everything, these databases can be sizable. For bacterial analysis, my advice would be to go with the Refseq Select, a complete yet modestly sized database. For your convenience, the build_refseq_select_db.sh script will build it automatically for you.
+Open the config.ini file and modify the parameters as needed (e.g., file, tools and database paths, thresholds, ...). This pipeline runs locally, therefore, an appropiate BLAST+ database must be installed and formatted with taxonomic information. Here (https://www.ncbi.nlm.nih.gov/books/NBK569841/) are some resources on how to build a custom databse with the BLAST+ suite. Consider disk space requirements before installing everything, these databases can be sizable. For bacterial analysis, my advice would be to go with the Refseq Select, a comprehensive yet modestly sized database. For your convenience, the build_refseq_select_db.sh script will build it automatically for you.
 
 You are good to go!
 
