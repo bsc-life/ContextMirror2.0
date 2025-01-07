@@ -7,20 +7,10 @@ Clone this repository to your local machine:
     git clone https://github.com/yourusername/ContextMirror2.0.git
     cd ContextMirror2.0
 
-Make sure you have the required tools that will be needed for downstream analysis:
 
-* BLAST+ suite ()
-* MAFFT ()
-* FastTree ()
 
 BLAST: Version 2.13, used to search the NCBI database for potential orthologs. 
-
-    sudo apt-get blast lo q sea
-
 MAFFT: Version 7.471 for multiple sequence alignments (MSAs) with the following settings:
-
-    sudo apt-get mafft lo q sea
-
 Python: Version 3.6.1 with these dependencies:
     os, sys
     Bio v1.79 (modules: SeqIO, AlignIO, Phylo, ClustalWCommandline, DistanceTreeConstructor)
@@ -31,12 +21,12 @@ Python: Version 3.6.1 with these dependencies:
     community v0.16
     scipy v1.8.1
     
-FastTree: Version 2.1 for phylogenetic tree construction.
-
-    sudo apt-get FAstTreee lo que sea
-    
+FastTree: Version 2.1 for phylogenetic tree construction.   
 csvkit: Version 1.3.0 for handling CSV files.
 
+    sudo apt-get blast lo q sea
+    sudo apt-get mafft lo q sea
+    sudo apt-get FAstTreee lo que sea
     sudo apt-get csvkit lo q sea
     
 Install the ContextMirror2.0 package:
