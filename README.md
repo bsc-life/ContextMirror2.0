@@ -7,20 +7,12 @@ Clone this repository to your local machine:
     git clone https://github.com/yourusername/ContextMirror2.0.git
     cd ContextMirror2.0
 
-BLAST: Version 2.13 (https://blast.ncbi.nlm.nih.gov/doc/blast-help/downloadblastdata.html)
-MAFFT: Version 7.471 (https://mafft.cbrc.jp/alignment/software/source.html)
-FastTree: Version 2.1 (https://anaconda.org/bioconda/fasttree)
-csvkit: Version 1.3.0 (https://csvkit.readthedocs.io/en/0.9.1/install.html)
+- BLAST: Version 2.13 (https://blast.ncbi.nlm.nih.gov/doc/blast-help/downloadblastdata.html)
+- MAFFT: Version 7.471 (https://mafft.cbrc.jp/alignment/software/source.html)
+- FastTree: Version 2.1 (https://anaconda.org/bioconda/fasttree)
+- csvkit: Version 1.3.0 (https://csvkit.readthedocs.io/en/0.9.1/install.html)
 
-Python: Version 3.6.1 with these dependencies:
-    os, sys
-    Bio v1.79 (modules: SeqIO, AlignIO, Phylo, ClustalWCommandline, DistanceTreeConstructor)
-    numpy v1.21.5
-    networkx v2.8.5
-    requests v2.28.1
-    pandas v1.4.3
-    community v0.16
-    scipy v1.8.1
+- Python: Version 3.6.1 (os, sys, Bio v1.79 (modules: SeqIO, AlignIO, Phylo, ClustalWCommandline, DistanceTreeConstructor),numpy v1.21.5, networkx v2.8.5, requests v2.28.1, pandas v1.4.3, community v0.16, scipy v1.8.1)
 
 Install the ContextMirror2.0 package:
 
@@ -38,7 +30,7 @@ ContextMirro2.0 offers two modules:
 
     MirrorTree: the pipeline runs until the contruction of the tree-tree correlation matrix.
     
-    ContextMirror: the pipeline runs the full ContextMirror pipeline.
+    ContextMirror: runs the full ContextMirror pipeline.
 
 For each protein in the input file, a Rreciprocal Best Hit will be performed, creating an individual directory for each of the cases (e.g. output_NP_414456.2/). Wihtin this folder, you will be able to access the homolog searches (both directions) and the orthologue search results. After that, a new directory will be created (tree_resuts/), were all possible pairs of porteins will be assessed and a subdirectory will be created (e.g. NP_414456.2_vs_NP_413258.1/) for each pair of proteins that share a orthologs in, at least, a number of species defined by the user in the config.ini file. Multiple Sequence Alignments (MSAs), phylogenetic trees, distance matrices and the correlation between them will be computed automatically and placed in a dataframe containing the tree-tree correlations (tree_results/tree_tree_matrix.csv).
 
