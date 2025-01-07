@@ -7,8 +7,6 @@ Clone this repository to your local machine:
     git clone https://github.com/yourusername/ContextMirror2.0.git
     cd ContextMirror2.0
 
-
-
 BLAST: Version 2.13, used to search the NCBI database for potential orthologs. 
 MAFFT: Version 7.471 for multiple sequence alignments (MSAs) with the following settings:
 Python: Version 3.6.1 with these dependencies:
