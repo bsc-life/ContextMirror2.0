@@ -1,27 +1,27 @@
 # ContextMirror2.0 
 
-ContextMirror2.0 is a tool designed to estimate pairwise coevolution of genes in a given proteome. This repository provides everything you need to run the pipeline locally, including configuration options for customizing your analysis.
+ContextMirror2.0 is a tool designed to estimate pairwise coevolution of genes in a given proteome, described in described in https://doi.org/10.1101/2024.12.27.630483. This repository provides everything you need to run the pipeline locally, including configuration options for customizing your analysis.
 
 Clone this repository to your local machine:
 
     git clone https://github.com/yourusername/ContextMirror2.0.git
     cd ContextMirror2.0
 
-Install the required dependencies:
+Make sure you have the required tools that will be needed for downstream analysis:
 
-    pip install -r requirements.txt
+* BLAST+ suite ()
+* MAFFT ()
+* FastTree ()
 
-Next, install the ContextMirror2.0 package
+The neccessary dependencies should be automatically included after installing the ContextMirror2.0 package:
 
     pip isntall .
 
-Within the ContextMirror2.0 folder create a new directory to perform your analysis (e.g. results/). Inside this deirectory you should place:
+Within the ContextMirror2.0 folder create a new directory to perform your analysis (e.g. results/). Inside this directory you should place:
 
-* Config.ini file: Adjust the parameters in the config.ini file to match your dataset and analysis needs.
+* Config.ini file: Adjust the parameters in the config.ini file to match your dataset and analysis needs. Remember tospecify your input file path.
 
-Place your multifasta file in the appropriate directory, or specify its path in the config.ini file.
-
-Open the config.ini file and modify the parameters as needed (e.g., file, tools and database paths, thresholds, ...). This pipeline runs locally, therefore, an appropiate BLAST+ database must be installed and formatted with taxonomic information. Here are some resources on how to build a databse with the BLAST+ suite. Consider disk space requirements before installing everything, these databases can be sizable. For bacterial analysis, my advice would be to go with the Refseq Select database. For your convenience, the build_refseq_select_db.sh script will build it automatically for you.
+Open the config.ini file and modify the parameters as needed (e.g., file, tools and database paths, thresholds, ...). This pipeline runs locally, therefore, an appropiate BLAST+ database must be installed and formatted with taxonomic information. Here are some resources on how to build a custom databse with the BLAST+ suite. Consider disk space requirements before installing everything, these databases can be sizable. For bacterial analysis, my advice would be to go with the Refseq Select, a complete yet modestly sized database. For your convenience, the build_refseq_select_db.sh script will build it automatically for you.
 
 You are good to go!
 
@@ -37,8 +37,7 @@ Later, the correlation is recomputed by calculating the correlation between thei
 
 Finally, a new matrix is created containing every possible combinations of significantly correlated protein pairs so far and every other third protein in the analysis, displaying the influence of every protein on every pair computed as the partial correlation coefficients (partial_matrix.csv).
 
-The final output of the ContextMirror2.0 approach are these three matrices. 
+The final output of the ContextMirror2.0 approach are these three matrices and the Jupyter Notebook dedicated to prodice analysis figures as described in the original publication is available:
 
-described in https://doi.org/10.1101/2024.12.27.630483
 
 
