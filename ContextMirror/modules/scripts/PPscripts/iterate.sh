@@ -14,3 +14,4 @@ done
 
 cat ${currentdir}'/'my_runs_aln.txt | parallel
 
+mv ${currentdir}'/'my_runs_aln.txt ${currentdir}'/my_runs/'
