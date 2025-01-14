@@ -4,7 +4,7 @@ ContextMirror2.0 is a tool designed to estimate pairwise coevolution of genes in
 
 Clone this repository to your local machine:
 
-    git clone https://github.com/yourusername/ContextMirror2.0.git
+    git clone https://github.com/m-iguel/ContextMirror2.0.git
     cd ContextMirror2.0
 
 - BLAST: Version 2.13 (https://blast.ncbi.nlm.nih.gov/doc/blast-help/downloadblastdata.html)
