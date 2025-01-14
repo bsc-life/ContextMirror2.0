@@ -12,7 +12,7 @@ Clone this repository to your local machine:
 - FastTree: Version 2.1 (https://anaconda.org/bioconda/fasttree)
 - csvkit: Version 1.3.0 (https://csvkit.readthedocs.io/en/0.9.1/install.html)
 
-- Python: Version 3.6.1 (os, sys, Bio v1.79 (modules: SeqIO, AlignIO, Phylo, ClustalWCommandline, DistanceTreeConstructor),numpy v1.21.5, networkx v2.8.5, requests v2.28.1, pandas v1.4.3, community v0.16, scipy v1.8.1)
+- Python: Version 3.6.1 (os, sys, Bio v1.79 (modules: SeqIO, AlignIO, Phylo, ClustalWCommandline, DistanceTreeConstructor),numpy v1.21.5, networkx v2.8.5, requests v2.28.1, pandas v1.4.3, community v0.16, scipy v1.8.1, pingouin v0.5.5)
 
 Install the ContextMirror2.0 package:
 
