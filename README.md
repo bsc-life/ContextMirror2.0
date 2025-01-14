@@ -36,9 +36,22 @@ For each protein in the input file, a Rreciprocal Best Hit will be performed, cr
 
 Later, the correlation is recomputed by calculating the correlation between their coevolutionary profiles (one row of the tree_tree_matrix.csv). Several files (.pkl) will be created to store the correlation values between the coevolutionary profiles as well as the associated p-values for each possible pair. These correlations will then be gathered in a new dataframe (tree_results/profile_profile_matrix.csv).
 
-Finally, a new matrix is created containing every possible combinations of significantly correlated protein pairs so far and every other third protein in the analysis, displaying the influence of every protein on every pair computed as the partial correlation coefficients (partial_matrix.csv).
+Finally, a new matrix is created containing every possible combinations of significantly correlated protein pairs so far and every other third protein in the analysis, displaying the influence of every protein on every pair computed as the partial correlation coefficients (df/partial_matrix.csv).
 
-The final output of the ContextMirror2.0 approach are these three matrices and the Jupyter Notebook dedicated to prodice analysis figures as described in the original publication is available:
+Finally, the predictions are processed and the final ranked list is produced (info_df.csv), gathering the following information:
+
+- interactorA: proteinA
+- interactorB: proteinB
+- third_protein_info: list of lists with third profiles influencing the pair proteinA-proteinB -> [[proteinC, partial_correlation, p-value], [proteinC2, partial_correlation, p-value], ...]
+- PPcorrelation: correlation between coevolutionary profiles of proteins A and B.
+- third_proteins: list of third proteins significantly influencing the interaction between proteins A and B.
+- third_proteins_len: number of third proteins significantly influencing the interaction between proteins A and B.
+- av_partial: average partial correlation of third proteins significantly influencing the interaction between proteins A and B.
+- interactor_pair: proteinA-proteinB (sorted alphabetically)
+- combined_score: scores from Tree-Tree Matrix, Profile-Profile Matrix and Partial Matrix imputed.
+- interaction_score: final interaction score calculated by correcting the combined_score.
+
+The final output of the ContextMirror2.0 approach is this ranked list, alongside the three matrices and the Jupyter Notebook dedicated to prodice analysis figures as described in the original publication is available:
 
 
 
