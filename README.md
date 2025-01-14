@@ -18,7 +18,7 @@ Install the ContextMirror2.0 package:
 
     pip isntall .
 
-Within the ContextMirror2.0 folder create a new directory to perform your analysis (e.g. results/). Inside this directory you should place:
+Within the ContextMirror2.0 folder create a new directory to perform your analysis (e.g. test/). Inside this directory you should place:
 
 * Config.ini file: Adjust the parameters in the config.ini file to match your dataset and analysis needs. Remember to specify your input file path.
 
