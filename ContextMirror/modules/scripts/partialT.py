@@ -17,3 +17,5 @@ def partial_matrix():
 
 def ranked_lists(partial_matrix, pp_matrix, partial_evalue, third_prot_correction_threshold):
     subprocess.call('python3 %s/../ContextMirror/modules/scripts/Partialscripts/make_prediction_and_format.py %s %s %s %s'%(currentdir, partial_matrix, pp_matrix, partial_evalue, third_prot_correction_threshold),shell=True)        
+    subprocess.call('mkdir %s/misc'%(currentdir),shell=True)
+    subprocess.call('mv  %s/*txt %s/*pkl %s/*txids %s/misc'%(currentdir, currentdir, currentdir, currentdir),shell=True)        
