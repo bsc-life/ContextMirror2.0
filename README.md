@@ -16,7 +16,7 @@ Clone this repository to your local machine:
 
 Install the ContextMirror2.0 package:
 
-    pip isntall .
+    pip install -e .
 
 Within the ContextMirror2.0 folder create a new directory to perform your analysis (e.g. test/). Inside this directory you should place:
 
